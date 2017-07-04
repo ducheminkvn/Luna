@@ -45,26 +45,26 @@ public class Luna {
 	public Luna(String path) throws IOException {
 		try{
 			System.out.println("Data Load from url : "+path);
-			airports = ParseTest.parseAirports(ParseTest.parseFileToURL(path+"/airports.csv"));
+			airports = Parse.parseAirports(Parse.parseFileToURL(path+"/airports.csv"));
 
 			System.out.println("... airports.csv downloaded");
-			countries = ParseTest.parseCountries(ParseTest.parseFileToURL(path+"/countries.csv"));
+			countries = Parse.parseCountries(Parse.parseFileToURL(path+"/countries.csv"));
 			System.out.println("... countries.csv downloaded");
-			runways = ParseTest.parseRunways(ParseTest.parseFileToURL(path+"/runways.csv"));
+			runways = Parse.parseRunways(Parse.parseFileToURL(path+"/runways.csv"));
 			System.out.println("... runways.csv downloaded");
 		} catch (IOException io) {
 			System.out.println("Error for download all files needed\nLoad from Local DataBase");
 			try {
-				airports = ParseTest.parseAirports(
-						ParseTest.parseFileToString(
+				airports = Parse.parseAirports(
+						Parse.parseFileToString(
 								Paths.get(DEFAUL_PATH+"/airports.csv")));
 				System.out.println("... airports.csv loaded");
-				countries = ParseTest.parseCountries(
-						ParseTest.parseFileToString(
+				countries = Parse.parseCountries(
+						Parse.parseFileToString(
 								Paths.get(DEFAUL_PATH+"/countries.csv")));
 				System.out.println("... countries.csv loaded");
-				runways = ParseTest.parseRunways(
-						ParseTest.parseFileToString(
+				runways = Parse.parseRunways(
+						Parse.parseFileToString(
 								Paths.get(DEFAUL_PATH+"/runways.csv")));	
 				System.out.println("... runways.csv loaded");
 			} catch (IOException io2) {
