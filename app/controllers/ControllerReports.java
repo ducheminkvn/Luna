@@ -28,11 +28,9 @@ import codejava.Luna;
  */
 public class ControllerReports extends Controller {
 
-		/**
-	 * An action that renders an HTML page with a welcome message.
-	 * The configuration in the <code>routes</code> file means that
-	 * this method will be called when the application receives a
-	 * <code>GET</code> request with a path of <code>/</code>.
+	/**
+	 * Display the reports result in application page
+	 * @return ok HTTP Code with the result of the reports request
 	 */
 	public Result index() {
 		

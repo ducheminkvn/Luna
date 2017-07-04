@@ -31,6 +31,10 @@ import codejava.Luna;
  */
 public class ControllerQuery extends Controller {
 
+	/**
+	 * Display the query result in application page
+	 * @return ok HTTP Code with the result of the query request
+	 */
 	public Result index() {
 		DynamicForm input = Form.form();
 	   	input = input.bindFromRequest();

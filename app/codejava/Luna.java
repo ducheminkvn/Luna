@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
-import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
@@ -15,30 +14,15 @@ import java.util.stream.Stream;
  * Created by kevin on 6/30/17.
  */
 
-/*
-2. Write a web application in Java or Scala that will ask the user for two actions : Query or Reports.
-
-2.1 Query Option will ask the user for the country name or code and print the airports & runways at each airport. 
-The input can be country code or country name. For bonus points make the test partial/fuzzy. e.g. entering zimb will result in Zimbabwe :)
-
-2.2 Choosing Reports will print the following:
-
-    10 countries with highest number of airports (with count) and countries with lowest number of airports.
-    Type of runways (as indicated in "surface" column) per country
-    Bonus: Print the top 10 most common runway identifications (indicated in "le_ident" column)
-
-Feel free to use any library/framework as necessary but write it as a web application. 
- */
-
 public class Luna {
 
-	private Scanner console = new Scanner(System.in);
 	private List<Airport> airports;
 	private List<Runway> runways;
 	private List<Country> countries;
 	private String DEFAUL_PATH = "./input";
+	
 	/**
-	 * 
+	 * Create a instance of Luna object
 	 * @param path
 	 * @throws IOException
 	 */
@@ -74,6 +58,11 @@ public class Luna {
 		}
 	}
 
+	/**
+	 * Query use the country name or code for search and print the airports & runways at each country's airports. 
+	 * @param string code or name or start of the name of country
+	 * @return String contained AirportsCountryAndRunwayCountryInfo
+	 */
 	public String query(String string){
 		System.out.println(string);
 		StringBuilder sb = new StringBuilder();
@@ -111,6 +100,13 @@ public class Luna {
 		return sb.toString();
 	}
 
+	/**
+	 * Found the info of the top 10 of countries with the highest number of airports, 
+	 * the top 10 of countries with the lowest number of airports,
+	 * the types of runways per country,
+	 * and the the top 10 most common runway identifications
+	 * @return String contained all data founded
+	 */
 	public String reports(){
 		StringBuilder sb = new StringBuilder();
 		sb.append(displayTopTenCountriesAirports());
@@ -217,32 +213,4 @@ public class Luna {
 					break;
 		return sb.toString();
 	}
-
-	private String displayTopTenCountriesAirportsPublic() {
-		StringBuilder sb = new StringBuilder();
-
-		TreeMap<Long, String> numbersOfCountriesAirports = new TreeMap<>();
-		countries.stream().map(country -> country.getCode().toUpperCase()).forEach( code -> {
-			long count = airports.stream()
-					.filter(airport -> code.equals(airport.getIso_country().toUpperCase()))
-					.count();
-			String oldCode = numbersOfCountriesAirports.getOrDefault(count, "");
-			if(oldCode.equals(""))
-				numbersOfCountriesAirports.put(count, code);
-			else
-				numbersOfCountriesAirports.put(count, oldCode+","+code);
-		});
-
-		int i = 10;
-		sb.append("Top 10 of countries with highest number of airports :\n");
-		for(Long numbersOfCountryAirports : numbersOfCountriesAirports.descendingKeySet())
-			for(String code : numbersOfCountriesAirports.get(numbersOfCountryAirports).split(","))
-				if(i-- > 0)
-					sb.append("\t"+code+":"+numbersOfCountryAirports+"\n");
-				else
-					break;
-		return sb.toString();
-	}
-
-
 }

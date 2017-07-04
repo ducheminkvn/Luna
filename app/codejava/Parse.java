@@ -40,7 +40,7 @@ public class Parse {
 		return sb.toString();
 	}
 	/**
-	 * Parse all airports data From one String contained this data
+	 * Parse all airports data From one String with CSV Format contained this data
 	 * @param data
 	 * @return List<Airport>
 	 * @throws IOException
@@ -66,7 +66,7 @@ public class Parse {
 		return list;
 	}
 	/**
-	 * Parse all countries data From one String contained this data
+	 * Parse all countries data From one String with CSV Format contained this data
 	 * @param data
 	 * @return List<Country>
 	 * @throws IOException
@@ -89,7 +89,7 @@ public class Parse {
 		return list;
 	}
 	/**
-	 * Parse all runways data From one String contained this data
+	 * Parse all runways data From one String with CSV Format contained this data
 	 * @param data
 	 * @return List<Runway>
 	 * @throws IOException

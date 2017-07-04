@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ky/Dropbox/GitHub/LunatechProject/conf/routes
-// @DATE:Mon Jul 03 22:32:29 PDT 2017
+// @DATE:Tue Jul 04 04:47:33 PDT 2017
 
 package router
 

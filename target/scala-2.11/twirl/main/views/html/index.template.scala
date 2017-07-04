@@ -70,8 +70,8 @@ Seq[Any](format.raw/*1.4*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Mon Jul 03 16:57:08 PDT 2017
-                  SOURCE: /home/ky/IdeaProjects/Untitled Folder/Lunatech/app/views/index.scala.html
+                  DATE: Tue Jul 04 04:47:34 PDT 2017
+                  SOURCE: /home/ky/Dropbox/GitHub/LunatechProject/app/views/index.scala.html
                   HASH: 29c2cd8451d5750bacca3d9829239b50e15ed39d
                   MATRIX: 738->1|834->3|861->5|892->28|931->30|960->33|1341->384
                   LINES: 27->1|32->1|33->2|33->2|33->2|34->3|52->21
