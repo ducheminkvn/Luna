@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/ky/Lunatech/conf/routes
-// @DATE:Mon Jul 03 17:45:51 PDT 2017
+// @SOURCE:/home/ky/Dropbox/GitHub/LunatechProject/conf/routes
+// @DATE:Mon Jul 03 22:32:29 PDT 2017
 
 package controllers;
 

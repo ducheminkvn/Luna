@@ -1,4 +1,4 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/home/ky/Lunatech/conf/logback.xml,/home/ky/Lunatech/target/scala-2.11/classes/logback.xml)[0m
-[0m[[0mdebug[0m] [0m	(/home/ky/Lunatech/conf/application.conf,/home/ky/Lunatech/target/scala-2.11/classes/application.conf)[0m
-[0m[[0mdebug[0m] [0m	(/home/ky/Lunatech/conf/routes,/home/ky/Lunatech/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/ky/Dropbox/GitHub/LunatechProject/conf/logback.xml,/home/ky/Dropbox/GitHub/LunatechProject/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/home/ky/Dropbox/GitHub/LunatechProject/conf/application.conf,/home/ky/Dropbox/GitHub/LunatechProject/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/ky/Dropbox/GitHub/LunatechProject/conf/routes,/home/ky/Dropbox/GitHub/LunatechProject/target/scala-2.11/classes/routes)[0m
